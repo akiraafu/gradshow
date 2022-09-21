@@ -473,6 +473,7 @@ main .project-des p {
 }
 
 .main-project .project-details .team .member .member-name {
+  font-size: 1rem;
   color: var(--blackish);
   padding: 6px;
   border-radius: 2px;
@@ -489,7 +490,7 @@ main .project-des p {
 
 .promotion {
   width: 100%;
-  height: 350px;
+  height: auto;
   background: #e5e5e5;
   display: flex;
   flex-direction: column;
@@ -520,32 +521,8 @@ main .project-des p {
   flex-direction: column;
 }
 
-.promotion .promo-projects .promo-project .promo-project-img {
-  width: 500px;
-  height: auto;
-  margin-bottom: 10px;
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
-}
-
-.promotion .promo-projects .promo-project .promo-project-img:hover {
-  -webkit-box-shadow: -5px 2px 10px -2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -5px 2px 10px -2px rgba(0, 0, 0, 0.75);
-  box-shadow: -5px 2px 10px -2px rgba(0, 0, 0, 0.75);
-}
-
-.promotion .promo-projects .promo-project .promo-project-img img {
-  width: 500px;
-  height: auto;
-  filter: brightness(80%);
-  transition: all 0.5s ease-in-out;
-}
-
-.promotion .promo-projects .promo-project .promo-project-img img:hover {
-  scale: 1.1;
-}
-
 .promotion .promo-projects .promo-project .promo-project-title {
+  font-size: 1rem;
   font-weight: 600;
   color: var(--blackish);
 }
@@ -576,4 +553,85 @@ main .project-des p {
   -webkit-box-shadow: -5px 2px 10px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -5px 2px 10px -2px rgba(0, 0, 0, 0.75);
   box-shadow: -5px 2px 10px -2px rgba(0, 0, 0, 0.75);
+}
+
+/* for mobile phones and tablets */
+
+@media (min-width: 280px) and (max-width: 800px) {
+  .main-project {
+    flex-direction: column;
+  }
+
+  .main-project .project-details {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+
+  .main-project .project-details .project-des {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+
+  .main-project .project-details .project-des h1 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .main-project .project-details .project-des p {
+    font-size: 1rem;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .main-project .project-details .project-des button {
+    font-size: 1rem;
+  }
+
+  .main-project .project-details .team {
+    flex: 100%;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .main-project .project-details .team .member {
+    width: 100px;
+    height: 160px;
+    gap: 5px;
+  }
+
+  .main-project .project-details .team .member .member-photo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .main-project .project-details .team .member .member-photo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .main-project .project-details .team .member .member-name {
+    font-size: 14px;
+  }
+
+  .promotion .promo-text {
+    font-size: 12px;
+  }
+  .promotion .promo-projects {
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+  .promotion .promo-projects .promo-project .promo-project-title {
+    font-size: 12px;
+  }
+  .promotion button {
+    font-size: 12px;
+  }
 }
